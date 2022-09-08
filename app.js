@@ -21,15 +21,9 @@ mongoose.connect('mongodb://localhost:27017/parcel', function (err) {
 
 });
 
-// app.get('/parcel/:address', parcel.getAll);
-// app.post('/parcel', parcel.createOne);
-// app.get('/parcel/:id', parcel.getOne);
-// app.put('/parcel/:id', parcel.updateOne);
-
-// app.post('/parcel/:id/sender', parcel.addParcel);
-
-
-
+app.get('/parcel/:address', parcel.getAll);
+app.put('/parcel/:id', parcel.updateOne);
+app.post('/sender/:id/parcel', sender.addParcel);
 app.get('/sender/:name', sender.getOne);
 app.post('/sender', sender.createOne);
 // app.get('/sender/:name', sender.getAll);
